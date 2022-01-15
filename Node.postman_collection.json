@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "b77524ae-792c-41fd-baa8-e51720535c05",
+		"name": "Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Etnik Beqiri\",\r\n    \"email\": \"etnik@gmail.com\",\r\n    \"username\": \"etnik\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWUyYzhkMTI3ZTVmNzRkNDllMjgyOTYiLCJpYXQiOjE2NDIyNTM3NzB9.iuQWEVPHLmQQfwnHWXWGZfI_BdoMht-e2hNlh5QIrnQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Authorizationd",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Etnik Beqiri\",\r\n    \"email\": \"etnik@gmail.com\",\r\n    \"username\": \"etnik\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/my-profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"my-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Car",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWUyYzhkMTI3ZTVmNzRkNDllMjgyOTYiLCJpYXQiOjE2NDIyNTUzMjMsImV4cCI6MTY0MjI1ODkyM30.uVqoqfZGJdJhtdOj3u6Y4QSQyHsfUm2rAYrkjYOIvDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Golf mk6\",\r\n    \"price_per_day\": 25.00,\r\n    \"year\": 2006,\r\n    \"color\": \"white\",\r\n    \"steering_type\": \"manual\",\r\n    \"number_of_seats\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cars",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWUyYzhkMTI3ZTVmNzRkNDllMjgyOTYiLCJpYXQiOjE2NDIyNzM1NDUsImV4cCI6MTY0MjI3NzE0NX0.AVEl_3AFXpoUTblp2BAH8TY6uxvYXptW6e1vYW-dsfk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/rental-cars?color=white&number_of_seats=5&steering_type=automatic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"rental-cars"
+					],
+					"query": [
+						{
+							"key": "color",
+							"value": "white"
+						},
+						{
+							"key": "number_of_seats",
+							"value": "5"
+						},
+						{
+							"key": "steering_type",
+							"value": "automatic"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"etnik\",\r\n    \"password\": \"etnik1122\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
