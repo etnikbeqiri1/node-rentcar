@@ -12,3 +12,5 @@ npm start
 ```cmd
 Node.postman_collection.json
 ```
+4. Test Endpoints - Database is hosted in Cloud
+
